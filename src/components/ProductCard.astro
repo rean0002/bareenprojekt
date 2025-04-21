@@ -1,5 +1,12 @@
 ---
-const { image, name, price, colors } = Astro.props;
+interface Props {
+  image: string;
+  name: string;
+  price: number;
+  colors: string[];
+}
+
+const { image, name, price, colors } = Astro.props as Props;
 ---
 
 <div class="card_container">
@@ -8,16 +15,22 @@ const { image, name, price, colors } = Astro.props;
   </div>
   <div class="produktinfo_container">
     <p>{name}</p>
-    <div class=" price_color">
-    <p class="price">{price} kr</p>
-    <div class="colors">
-      {colors.map(color => (
-        <span class="color-box" style={`background-color: ${color}`}></span>
-      ))}
+    <div class="price_color">
+      <p class="price">{price} kr</p>
+      <div class="colors">
+        {
+          colors.map(color => (
+            <span
+              class="color-box"
+              style={`background-color: ${color};`}
+            ></span>
+          ))
+        }
       </div>
     </div>
   </div>
 </div>
+
 
 <style>
 .card_container {
