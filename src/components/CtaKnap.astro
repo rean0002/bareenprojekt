@@ -1,0 +1,26 @@
+---
+const {titel} = Astro.props
+---
+<div class="cta_knap">
+    <a href="https://bareen.dk/">{titel}</a>
+</div>
+
+<style>
+   .cta_knap a {
+    padding-block: 0.7rem;
+    padding-inline: 4.5rem;
+    border: solid 1px white;
+    display: inline-block;
+    color: white; 
+    background-color: transparent; 
+    transition: all 0.3s ease;
+     font-family: Helvetica, sans-serif;
+     font-weight: 600;
+    text-decoration: none;
+  }
+   /* Hover-effekt */
+  .cta_knap a:hover {
+    color: black; 
+    background-color: rgb(209, 209, 209); 
+  }
+</style>

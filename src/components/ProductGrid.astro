@@ -1,0 +1,77 @@
+---
+import ProductCard from '../components/ProductCard.astro';
+
+const products = [
+  {
+    image: '/public/img/swimsuit.webp',
+    name: 'Plugin x Bareen, Swimsuit - White',
+    price: 499,
+    colors: ['#ffffff', '#a52a2a', '#000000']
+  },
+  {
+    image: '/public/img/shorts.webp',
+    name: 'Plugin x Bareen, Swimsuit - White',
+    price: 499,
+    colors: ['#ffffff', '#a52a2a', '#000000']
+  },
+    {
+    image: '/public/img/bathrope.webp',
+    name: 'Plugin x Bareen, Swimsuit - White',
+    price: 499,
+    colors: ['#ffffff', '#a52a2a', '#000000']
+  },
+    {
+    image: '/public/img/beanie.webp',
+    name: 'Plugin x Bareen, Swimsuit - White',
+    price: 499,
+    colors: ['#ffffff', '#a52a2a', '#000000']
+  },
+    {
+    image: '/public/img/waterbottle.webp',
+    name: 'Plugin x Bareen, Swimsuit - White',
+    price: 499,
+    colors: ['#ffffff', '#a52a2a', '#000000']
+  },
+  // Flere produkter kan nemt tilføjes her
+];
+---
+<h2>Plugin x Bareen - Limitied Edition Drop</h2>
+
+<style>
+    h2{
+        padding-left: 7vw;
+    }
+    @media (max-width: 800px) {
+       h2{
+        padding-left: 2rem;
+    }  
+    }
+</style>
+
+<div class="product-grid">
+  {products.map(product => (
+    <ProductCard {...product} />
+  ))}
+</div>
+
+<style>
+.product-grid {
+  display: flex;
+  flex-wrap: nowrap; /* Forhindrer at items brydes til næste linje */
+  overflow-x: auto; /* Gør det muligt at scrolle horisontalt */
+  padding: 2rem;
+}
+
+.product-grid::-webkit-scrollbar {
+  height: 8px; /* Juster højden på scrollbaren */
+}
+
+.product-grid::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.product-grid::-webkit-scrollbar-track {
+  background: #0000001a;
+}
+</style>

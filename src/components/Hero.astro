@@ -1,0 +1,98 @@
+---
+import CtaKnap from "../components/CtaKnap.astro"
+---
+
+
+
+
+<div class="promo-banner">
+    <p class="scrolling-text">NYT COLLAB! &#160; &#160;Tjek vores nye samarbejde med Plugin Heat Club x Bareen! &#160;&#160;&#160; &#160; NYT COLLAB! &#160; &#160;Tjek vores nye samarbejde med Plugin Heat Club x Bareen! &#160;&#160;&#160; &#160;NYT COLLAB! &#160;&#160; Tjek vores nye samarbejde med Plugin Heat Club x Bareen!</p>
+</div>
+
+<header>
+    <div class="hero_container">
+        <img src="/public/img/heroimg.webp" alt="hero">
+        <div class="indhold_container">
+            <h1>PLUGIN HEAT CLUB X BAREEN® </h1>
+            <h3>Limited Edition Drop</h3>
+            <CtaKnap titel="SHOP"></CtaKnap>
+        </div>
+    </div>
+</header>
+
+<style>
+
+.hero_container {
+  position: relative;
+  width: 100%;
+  height: 700px; 
+  overflow: hidden;
+}
+
+.hero_container img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.indhold_container {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 1;
+  color: white;
+  text-align: center;
+}
+
+h3{
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+}
+
+.promo-banner {
+    position: sticky; /* Skift fra fixed til sticky */
+    top: 0; /* Sørg for, at det holder sig øverst */
+    left: 0;
+    width: 100%;
+    background-color: #CCBFB4; /* Baggrundsfarve på banneret */
+    color: #FFFFFF !important; /* Brug #FFFFFF for at sikre ren hvid */
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 9999; /* Sørg for, at banneret ligger over alt andet */
+    overflow: hidden; /* Skjuler overskydende tekst */
+}
+
+.scrolling-text {
+    display: inline-block;
+    white-space: nowrap; /* Sørger for, at teksten ikke brydes */
+    animation: slideBanner 25s linear infinite; /* Animer teksten kontinuerligt */
+}
+
+@keyframes slideBanner {
+    0% {
+        transform: translateX(100%); /* Startposition udenfor til højre */
+    }
+    100% {
+        transform: translateX(-100%); /* Slutposition udenfor til venstre */
+    }
+}
+
+.promo-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrolling-text {
+    display: inline-flex;
+    justify-content: space-between;
+    padding-right: 100%; /* Sikrer, at der er plads til teksten at køre */
+}
+
+</style>

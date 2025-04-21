@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background-color: #efe1d9;
+}
+/******* generelt ******/
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+/******** fonts *******/
+
+h1 {
+  font-family: Helvetica, sans-serif;
+  color: white;
+}
+h2 {
+  font-family: Helvetica, sans-serif;
+  color: #333333;
+  font-size: 25px;
+  padding-block: 2rem;
+}
+h3 {
+  font-family: Helvetica, sans-serif;
+  color: white;
+  font-weight: 800;
+  font-size: 17px;
+}
+h4 {
+  color: #ab1718;
+  font-family: Helvetica, sans-serif;
+  font-size: 40px;
+}
+p {
+  font-family: Helvetica, sans-serif;
+  color: #333333;
+  max-width: 75ch; /* Maksimal bredde, der svarer til ca. 75 tegn */
+  word-wrap: break-word; /* Sørger for, at lange ord brydes */
+  line-height: 1.5;
+}
+/******** Navigation *******/
+.navbar {
+  position: fixed; /* Gør menuen også fast i toppen */
+  top: 4rem; /* Sætter en margin på toppen, så menuen ligger under banneret */
+  left: 0;
+  width: 100%;
+  z-index: 9998; /* Sørger for at menuen ligger lige under banneret */
+  background-color: rgba(0, 0, 0, 0.5); /* Giver en let gennemsigtighed for baggrunden */
+}

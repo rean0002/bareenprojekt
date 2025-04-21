@@ -1,0 +1,69 @@
+---
+const { image, name, price, colors } = Astro.props;
+---
+
+<div class="card_container">
+  <div class="image-container">
+    <img src={image} alt={name} />
+  </div>
+  <div class="produktinfo_container">
+    <p>{name}</p>
+    <div class=" price_color">
+    <p class="price">{price} kr</p>
+    <div class="colors">
+      {colors.map(color => (
+        <span class="color-box" style={`background-color: ${color}`}></span>
+      ))}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.card_container {
+  border: 1px solid #C3C3C3;
+  background: #FFF7F3;
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.image-container img {
+  width: 100%;
+  object-fit: cover;
+}
+.image-container {
+  padding-bottom: 12px; 
+  border-bottom: 1px solid #C3C3C3; 
+
+}
+.produktinfo_container p {
+  margin: 0;
+  font-size: 14px;
+}
+.produktinfo_container{
+    padding-left: 10px;
+    padding-block: 10px;
+}
+.price {
+  margin-top: 8px;
+  padding-top: 7px;
+}
+
+.colors {
+    padding-top: 3px;
+  margin-top: 8px;
+  display: flex;
+  gap: 4px;
+}
+
+.color-box {
+  width: 25px;
+  height: 13px;
+  border: 1px solid #000;
+}
+
+.price_color{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+</style>

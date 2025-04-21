@@ -1,0 +1,37 @@
+<div class="imagetekstsection_container">
+    <img src="/public/img/imagetekstsection.webp" alt="">
+    <div class="tekst_container">
+        <h2>Collabet som helhed</h2>
+        <p>Som deltager i collabet mellem Plugin Heat Club og Bareen får du en helhedsoplevelse, hvor både krop og stil er i centrum. Du får adgang til eksklusive saunagus-events i unikke omgivelser – skabt til at give dig ro i sindet og glød i huden. Samtidig får du mulighed for at shoppe limited edition wellness-produkter og comfy styles fra Bareen, designet specifikt til afslapning før og efter saunaen.
+Det er self-care med stil – og en måde at koble af på, uden at gå på kompromis med æstetikken.</p>
+    </div>
+</div>
+
+<style>
+.imagetekstsection_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-block: 6rem;
+    background-color: #CCBFB4;
+    padding-inline: 7vw;
+    gap: 7vw    ;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    .imagetekstsection_container {
+        grid-template-columns: 1fr; 
+        padding: 0; 
+    }
+
+    .imagetekstsection_container img {
+        order: 2; 
+        width: 100%; 
+    }
+
+    .tekst_container {
+        order: 1; 
+        padding: 2rem;
+    }
+}
+</style>

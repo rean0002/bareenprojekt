@@ -1,0 +1,162 @@
+---
+
+---
+<nav>
+  <div class="burger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ul class="menu">
+    <li><a href="https://bareen.dk/">HERRE</a></li>
+    <li><a href="https://bareen.dk/">DAME</a></li>
+    <li><a href="https://bareen.dk/">SPORT</a></li>
+    <li><a href="https://bareen.dk/">CUMMUNITY</a></li>
+    <li><a href="https://bareen.dk/">COLLABS</a></li>
+  </ul>
+  <p class="logo"><strong><a href="https://bareen.dk/">Bareen®</a></strong></p>
+  <ul>
+    <li><a href="https://bareen.dk/">CLUB</a></li>
+    <li><a href="https://bareen.dk/">LOG IN</a></li>
+    <li><a href="https://bareen.dk/"> <img src="/public/svg/dk.svg" alt=""></a></li>
+    <li> <a href="https://bareen.dk/"> <img src="/public/svg/sogeikon.svg" alt=""></a></li>
+  </ul>
+</nav>
+
+<style>
+/* General Nav Styles */
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  padding-top: 2.5rem !important; 
+  z-index: 2;
+  position: absolute;
+  padding-block: 1rem;
+  background-color: transparent;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav:hover {
+  background-color: white;
+  color: black;
+}
+
+nav:hover .logo a {
+  color: black;
+}
+
+nav:hover svg {
+  fill: black;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+ul li a {
+  color: inherit;
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 550;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+ul li a img {
+  width: 1rem;
+}
+
+.logo a {
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+  padding-right: 12vw;
+}
+
+svg {
+  fill: white;
+  transition: fill 0.3s;
+}
+
+/* Burger menu styling */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px ;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.burger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+nav:hover .burger-menu .bar {
+  background-color: black;
+}
+
+
+.menu.open {
+  display: flex;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  background-color: white;
+  color: black;
+  width: 100%;
+  text-align: center;
+}
+
+
+@media (max-width: 800px) {
+  .burger-menu {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+  
+  .logo{
+    padding-left: 30vw;
+  }
+}
+
+
+
+
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const burgerMenu = document.querySelector(".burger-menu");
+    const menu = document.querySelector(".menu");
+
+    burgerMenu.addEventListener("click", () => {
+      menu.classList.toggle("open");
+    });
+  });
+</script>

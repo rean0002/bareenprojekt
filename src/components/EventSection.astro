@@ -1,0 +1,82 @@
+---
+import CtaKnap from "../components/CtaKnap.astro"
+---
+<h2>Cummunity & Events</h2>
+<div class="event_container2">
+<div class="event_container">
+    <img src="public/img/event1.webp" alt="">
+    <div class="event_indhold">
+        <h6>EKSLUSIVT <br>SPECIAL EVENT <br> FOR INVITEREDE</h6></div>
+    <div class="cta_knap"><CtaKnap titel="SE EVENT"></CtaKnap>
+</div>
+</div>
+<div class="event_container">
+    <img src="public/img/event2.webp" alt="">
+    <div class="event_indhold">
+        <h6>JOIN CUMMUITY</h6></div>
+    <div class="cta_knap"><CtaKnap titel="TILMELD"></CtaKnap>
+</div>
+</div>
+<style>
+h2{
+    background-color: #CCBFB4;
+    padding-left: 7vw;
+}
+
+h6{
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 3vw;
+}
+.event_container{
+    position: relative;
+}
+.event_container img{
+    height: 400px;
+    object-fit: cover;
+}
+.event_indhold{
+    position: absolute;
+    top: 10%;
+    padding-left: 2vw;
+}
+.cta_knap{
+    position: absolute;
+    top: 80%;
+    padding-left: 2vw;
+}
+.event_container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 800px){
+      h2{
+        background-color: #CCBFB4;
+        padding-left: 7vw;
+    }
+
+    h6{
+        color: white;
+          font-family: Helvetica, sans-serif;
+          font-size: 8vw;
+    }
+.event_container{
+    position: relative;
+}
+.event_indhold{
+    position: absolute;
+    top: 10%;
+    padding-left: 6vw;
+}
+.cta_knap{
+    position: absolute;
+    top: 80%;
+    padding-left: 6vw;
+} 
+.event_container2{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
+
+</style>
